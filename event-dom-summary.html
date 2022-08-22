@@ -10,6 +10,23 @@
 
 <body>
     <h1>Final dom summary event handlar</h1>
+    <h3 id="handler-status">DEfault text</h3>
+    <input type="text">
+    <br>
+    <button onclick="handdleOnClick()">handle event by add onclick<button>
+            <button id="event-listerner">handle event by addEventListener</button>
+            <script>
+                function handdleOnClick() {
+                    console.log('button cliked');
+                    const handlerStatus = document.getElementById('handler-status');
+                    handlerStatus.innerText = 'handler text changed'
+                }
+                document.getElementById('event-listerner').addEventListener('click', function () {
+                    const handlerStatus = document.getElementById('handler-status');
+                    handlerStatus.innerText = 'text updated by addEventListener';
+                })
+
+            </script>
 </body>
 
 </html>
